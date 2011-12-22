@@ -194,6 +194,9 @@ obj-y += e1000.o
 obj-$(CONFIG_KVM) += ivshmem.o
 
 # Hardware support
+#Arduino Uno board
+obj-atmel-y = arduino_test.o
+
 obj-i386-y += vga.o
 obj-i386-y += mc146818rtc.o i8259.o pc.o
 obj-i386-y += cirrus_vga.o apic.o ioapic.o piix_pci.o

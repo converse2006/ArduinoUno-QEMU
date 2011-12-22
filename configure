@@ -951,6 +951,7 @@ sh4-softmmu \
 sh4eb-softmmu \
 sparc-softmmu \
 sparc64-softmmu \
+atmel-softmmu \
 "
     fi
 # the following are Linux specific
@@ -2575,6 +2576,13 @@ TARGET_BASE_ARCH=""
 TARGET_ABI_DIR=""
 
 case "$target_arch2" in
+    atmel)
+    TARGET_ARCH=atmel
+    TARGET_BASE_ARCH=atmel
+    bflt=yes
+    target_phys_bits=32
+    target_nptl="yes"
+  ;;
   i386)
     target_phys_bits=32
   ;;
